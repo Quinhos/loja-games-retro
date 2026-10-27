@@ -82,6 +82,7 @@
             btnSair.TabIndex = 3;
             btnSair.Text = "sair";
             btnSair.UseVisualStyleBackColor = false;
+            btnSair.Click += btnSair_Click;
             // 
             // FormMenu
             // 

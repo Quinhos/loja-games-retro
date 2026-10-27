@@ -30,5 +30,20 @@ namespace LojaGames
                 relatorio.ShowDialog();
             }
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show(
+                "Deseja realmente sair da loja?",
+                "Confirmar saída",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (resposta == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
