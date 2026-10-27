@@ -120,6 +120,33 @@ namespace LojaGames
                 FlatStyle = FlatStyle.Flat
             };
 
+            btnComprar.Click += (sender, e) =>
+            {
+                int quantidade = (int)numQuantidade.Value;
+
+                Venda venda = new Venda
+                {
+                    NomeJogo = nome,
+                    Quantidade = quantidade,
+                    PrecoUnitario = preco,
+                    Data = DateTime.Now
+                };
+
+                LojaDados.Vendas.Add(venda);
+
+                MessageBox.Show(
+                    $"Pedido registrado com sucesso!\n\n" +
+                    $"Jogo: {venda.NomeJogo}\n" +
+                    $"Quantidade: {venda.Quantidade}\n" +
+                    $"Total: {venda.Total:C2}",
+                    "Venda realizada",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                numQuantidade.Value = 1;
+            };
+
             card.Controls.Add(lblNome);
             card.Controls.Add(lblPreco);
             card.Controls.Add(lblQuantidade);
