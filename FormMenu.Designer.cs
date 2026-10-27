@@ -56,7 +56,7 @@
             btnJogos.TabIndex = 1;
             btnJogos.Text = "jogos";
             btnJogos.UseVisualStyleBackColor = false;
-            btnJogos.Click += button1_Click;
+            btnJogos.Click += btnJogos_Click;
             // 
             // btnRelatorio
             // 
@@ -69,6 +69,7 @@
             btnRelatorio.TabIndex = 2;
             btnRelatorio.Text = "relatorio de vendas";
             btnRelatorio.UseVisualStyleBackColor = false;
+            btnRelatorio.Click += btnRelatorio_Click;
             // 
             // btnSair
             // 

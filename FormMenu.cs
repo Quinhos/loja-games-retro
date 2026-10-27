@@ -15,9 +15,20 @@ namespace LojaGames
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnJogos_Click(object sender, EventArgs e)
         {
+            using (FormJogos jogos = new FormJogos())
+            {
+                jogos.ShowDialog();
+            }
+        }
 
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            using (FormRelatorio relatorio = new FormRelatorio())
+            {
+                relatorio.ShowDialog();
+            }
         }
     }
 }
