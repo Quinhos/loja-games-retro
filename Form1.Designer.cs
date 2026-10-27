@@ -59,6 +59,7 @@
             // timerSplash
             // 
             timerSplash.Interval = 3000;
+            timerSplash.Tick += timerSplash_Tick;
             // 
             // Form1
             // 

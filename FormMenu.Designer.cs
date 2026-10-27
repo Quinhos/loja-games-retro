@@ -28,10 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormMenu";
+            SuspendLayout();
+            // 
+            // FormMenu
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.MidnightBlue;
+            ClientSize = new Size(584, 311);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "FormMenu";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Menu Principal";
+            ResumeLayout(false);
         }
 
         #endregion
