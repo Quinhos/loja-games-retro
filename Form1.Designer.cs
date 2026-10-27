@@ -29,11 +29,70 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            lblTitulo = new Label();
+            lblcarregando = new Label();
+            timerSplash = new System.Windows.Forms.Timer(components);
+            progressBarSplash = new ProgressBar();
+            SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.Font = new Font("Microsoft Sans Serif", 8.25F);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(50, 100);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(500, 60);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "\tLOJA DE GAMES RETRÔ";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblcarregando
+            // 
+            lblcarregando.Font = new Font("Segoe UI", 12F);
+            lblcarregando.ForeColor = Color.White;
+            lblcarregando.Location = new Point(50, 160);
+            lblcarregando.Name = "lblcarregando";
+            lblcarregando.Size = new Size(500, 30);
+            lblcarregando.TabIndex = 1;
+            lblcarregando.Text = "Carregando...";
+            lblcarregando.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // timerSplash
+            // 
+            timerSplash.Interval = 3000;
+            timerSplash.Tick += timerSplash_Tick;
+            // 
+            // progressBarSplash
+            // 
+            progressBarSplash.Location = new Point(125, 240);
+            progressBarSplash.MarqueeAnimationSpeed = 30;
+            progressBarSplash.Name = "progressBarSplash";
+            progressBarSplash.Size = new Size(350, 20);
+            progressBarSplash.Style = ProgressBarStyle.Marquee;
+            progressBarSplash.TabIndex = 2;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Text = "Form1";
+            BackColor = Color.MidnightBlue;
+            ClientSize = new Size(584, 311);
+            Controls.Add(progressBarSplash);
+            Controls.Add(lblcarregando);
+            Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Loja de Games Retrô";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Label lblTitulo;
+        private Label lblcarregando;
+        private System.Windows.Forms.Timer timerSplash;
+        private ProgressBar progressBarSplash;
     }
 }
